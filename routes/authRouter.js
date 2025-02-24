@@ -3,7 +3,7 @@ import { loginValidation, signupValidation } from "../middleware/authValidation.
 import { login, signup } from "../controllers/authControllers.js";
 
 const router = Router()
-
+//http://localhost:8080/api/v1/login
 router.post('/login',loginValidation,login)
 router.post("/signup",signupValidation,signup)
 
