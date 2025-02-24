@@ -43,7 +43,7 @@ try {
         process.env.JWT_SECRET,
         {expiresIn:'24h'}
     )
-    res.status(200).json({message:"Login Successfully",success:true,jwtToken,email})
+    res.status(200).json({message:"Login Successfully",success:true,jwtToken,email,name:user.name})
 } catch (error) {
     res.status(500).json({message:"internal server error",error})
 }

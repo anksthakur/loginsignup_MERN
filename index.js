@@ -5,6 +5,8 @@ import dbConnection from "../backend/models/db.js";
 import bodyParser from "body-parser";
 import cors from "cors";
 import router from "./routes/authRouter.js";
+
+import productRouters from "./routes/productRouter.js";
 dotenv.config({
     path: "./.env"
 });
@@ -18,6 +20,7 @@ app.use(bodyParser.json())
 app.use(cors())
 //router
 app.use("/api/v1",router)
+app.use("/api/v1",productRouters)
 
 const PORT = process.env.PORT || 8080
 // checking server on browser
