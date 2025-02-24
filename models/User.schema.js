@@ -1,19 +1,19 @@
-import { required } from "joi"
+
 import mongoose from "mongoose"
 
 const userSchema = new mongoose.Schema({
 name:{
     type:String,
-    required,
+    required:true,
 },
 email:{
     type:String,
-    required,
+    required:true,
     unique:true
 },
 password:{
     type:String,
-    required
+    required:true,
 }
 },{timestamps:true})
 
